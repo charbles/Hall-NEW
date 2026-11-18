@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hallmark Logic UK Ltd builds websites, apps and self-service portals and provides ongoing website support and maintenance.">
+  <title>Hallmark Logic | Web Development &amp; Support</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #182c25;
+      --muted: #465b51;
+      --forest: #102e25;
+      --mint: #ddf0b7;
+      --paper: #f6f7ef;
+      --line: #d6e0d4;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.65 system-ui, sans-serif; }
+    a { color: inherit; text-underline-offset: .25em; }
+    a:focus-visible { outline: 3px solid #c46e3e; outline-offset: 4px; }
+    .skip { position: absolute; left: 1rem; top: .5rem; padding: .5rem 1rem; background: white; transform: translateY(-200%); }
+    .skip:focus { transform: none; z-index: 1; }
+    .wrap { width: min(74rem, calc(100% - 2.5rem)); margin-inline: auto; }
+    .bar, nav, .foot { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem 1.4rem; }
+    .bar, .foot { justify-content: space-between; padding-block: 1rem; }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.2rem; font-weight: 780; }
+    .brand, header nav a { text-decoration: none; }
+    header nav a:hover { text-decoration: underline; }
+    .mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: .6rem; background: var(--forest); color: var(--mint); font-size: .8rem; letter-spacing: -.04em; }
+    .nav-contact { border: 1px solid #a5b5a8; border-radius: 99px; padding: .35rem .85rem; }
+    .hero { background: var(--forest); color: #fbfcf5; padding-block: clamp(3rem, 8vw, 7rem); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); align-items: end; }
+    h1, h2, h3 { margin: 0; line-height: 1.12; }
+    h1, h2 { font-family: Georgia, serif; font-weight: 400; letter-spacing: -.05em; text-wrap: balance; }
+    h1 { max-width: 12ch; font-size: clamp(3rem, 7.7vw, 7rem); line-height: .98; }
+    h2 { font-size: clamp(2.25rem, 5vw, 3.8rem); }
+    h3 { font-size: 1.25rem; }
+    p { max-width: 60ch; color: var(--muted); margin: .85rem 0 0; }
+    .hero p { color: #d9e8dd; font-size: clamp(1rem, 2vw, 1.18rem); }
+    .button { display: inline-flex; gap: .7rem; align-items: center; margin-top: 1.5rem; padding: .73rem 1.15rem; border-radius: 99px; background: var(--mint); color: var(--forest); font-weight: 750; text-decoration: none; }
+    .button:hover { background: #f2ffdb; }
+    .service-links { margin: 0; padding: 0; list-style: none; border-top: 1px solid #537167; }
+    .service-links a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid #537167; color: #f4f8ee; text-decoration: none; }
+    .service-links a:hover { color: var(--mint); text-decoration: underline; }
+    .service-links span { color: var(--mint); }
+    .section { padding-block: clamp(3rem, 6vw, 5.5rem); }
+    .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 1.75rem; }
+    article { border: 1px solid var(--line); border-top: 3px solid #7d9e78; border-radius: .75rem; padding: clamp(1.1rem, 3vw, 1.7rem); background: #fff; scroll-margin-top: 1rem; }
+    article:target { outline: 2px solid #537950; outline-offset: 3px; }
+    .about { border-top: 1px solid var(--line); }
+    .about-grid, .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 1rem 3rem; align-items: start; }
+    .about-copy p:first-child { margin-top: 0; }
+    .contact { background: var(--mint); }
+    .contact .button { background: var(--forest); color: #fff; margin-top: 0; }
+    .contact .button:hover { background: #285244; }
+    .contact-grid { align-items: center; }
+    .call { justify-self: end; }
+    .foot { font-size: .9rem; color: var(--muted); }
+    @media (max-width: 46rem) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .call { justify-self: start; }
+    }
+    @media (max-width: 30rem) {
+      .bar { align-items: flex-start; flex-direction: column; }
+      nav { column-gap: .9rem; }
+    }
+  </style>
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#top"><span class="mark" aria-hidden="true">HL</span> Hallmark Logic</a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="#about">About us</a>
+        <a class="nav-contact" href="#contact">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="title">
+      <div class="wrap hero-grid">
+        <div>
+          <h1 id="title">Websites built for the work you do.</h1>
+          <p>We design, build and support websites, apps and self-service portals for UK small businesses, charities and community groups.</p>
+          <a class="button" href="#contact">Discuss your project <span aria-hidden="true">↗</span></a>
+        </div>
+        <ul class="service-links" aria-label="Explore our services">
+          <li><a href="#development">Web development <span aria-hidden="true">↘</span></a></li>
+          <li><a href="#maintenance">Site support and maintenance <span aria-hidden="true">↘</span></a></li>
+          <li><a href="#integrations">Payments and integrations <span aria-hidden="true">↘</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <section class="wrap section" id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Services</h2>
+      <div class="cards">
+        <article id="development">
+          <h3>Web development</h3>
+          <p>Build a new website, web app or self-service portal. We help with discovery, design, development, hosting and search engine optimisation.</p>
+        </article>
+        <article id="maintenance">
+          <h3>Site support and maintenance</h3>
+          <p>Keep your website running with regular updates, security monitoring and technical support. We can also improve an existing site as your needs change.</p>
+        </article>
+        <article id="integrations">
+          <h3>Payments and integrations</h3>
+          <p>Accept online payments or donations through Stripe, PayPal, Apple Pay and Google Pay. Connect your website to your CRM, analytics and other existing systems.</p>
+        </article>
+      </div>
+    </section>
+    <section class="wrap section about about-grid" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About us</h2>
+      <div class="about-copy">
+        <p>Hallmark Logic UK Ltd is a UK-based development team working with startups, small businesses, charities and community groups. We build practical tools that make services easier to access and reduce everyday admin.</p>
+        <p>We also help organisations set up VoIP phone systems with call routing, automated menus and voicemail.</p>
+      </div>
+    </section>
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <h2 id="contact-title">Let’s talk about your project</h2>
+          <p>Whether you’re planning a new website or need help with an existing one, give us a call.</p>
+        </div>
+        <a class="button call" href="tel:+441279975007">Call 01279 975007 <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap foot">
+    <span>© Hallmark Logic UK Ltd · Company no. 15095928</span>
+    <nav aria-label="Legal">
+      <a href="https://www.hallmarklogic.com/privacy-policy/">Privacy policy</a>
+      <a href="https://www.hallmarklogic.com/terms-of-services/">Terms of service</a>
+    </nav>
+  </footer>
+</body>
+</html>
